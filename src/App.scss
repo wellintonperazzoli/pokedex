@@ -1,0 +1,249 @@
+html {
+  background-color: #282c34;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  min-height: 100%;
+  width: 100%;
+}
+body { 
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@mixin pokemonTypes {
+  &--grass {
+    background-color: green;
+  }
+  &--fire {
+    background-color: red;
+  }
+  &--water {
+    background-color: lightblue;
+  }
+
+  &--flying { 
+    background-color: silver;
+  }
+
+  &--poison {
+    background-color: slateblue;
+  }
+
+  &--bug {
+    background-color: brown;
+  }
+}
+
+
+.searchBox {
+  width: calc(100% - 50px);
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px auto 0 auto;
+
+  &__input {
+    margin: 0 auto;
+    padding: 0.5em;
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 5px;
+
+    &:focus-visible, &:focus { 
+      outline: none;
+    }
+  }
+}
+
+.cardList {
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__card {
+    width: calc(100vh / 4 - 25px);
+    background: white;
+    color: #282c34;
+    font-size: 16px;
+    border: 1px solid white;
+    text-align: left;
+    padding: 10px 0;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__info {
+      margin: 0 10px;
+    }
+
+    &__id {
+      letter-spacing: 0.2em;
+      text-align: left;
+      font-size: 0.8em;
+      margin: 0;
+      color: gray;
+    }
+
+    &__name {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    &__category {
+      background-color: teal;
+      color: #fff;
+      border-radius: 3px;
+      line-height: 1.5em;
+      margin: 0 3% 0 0;
+      width: 30%;
+      display: inline-block;
+      font-size: 0.7em;
+      text-align: center;
+
+      @include pokemonTypes
+    }
+
+    &:hover {
+      opacity: 0.9;
+      cursor: pointer;
+      margin-top: -2px;
+    }
+  }
+}
+
+
+.info {
+  margin: 10px auto 0 auto;
+  background-color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+
+  &__header {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+  }
+
+  &__body {
+    display: flex;
+    align-items: left;
+    align-items:flex-start;
+    align-content:flex-start;
+    flex-wrap: wrap;
+
+    &__block { 
+      width: 50%;
+
+      &__img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      &__desc {
+        color: black;
+      }
+
+      &__category {
+        margin: 10px 0;
+
+        &__type {
+          background-color: teal;
+          color: #fff;
+          border-radius: 3px;
+          padding: 10px 30px;
+          margin: 0 3% 0 0;
+          text-align: center;
+          display: inline-block;
+          
+          @include pokemonTypes
+          
+        }
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 20px;
+    border-top: 1px solid silver;
+
+    &__button {
+      text-decoration: none;
+      background-color: lightskyblue;
+      padding: 10px 30px;
+      border-radius: 10px;
+      color: white;
+      font-size: 0.7em;
+
+      &:hover{
+        background-color: lightblue;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 600px)  {
+  .searchBox {
+    &__input{ 
+      max-width: 380px;
+    }
+  }
+  .cardList {
+    &__card {
+      width: calc(100% - 50px);
+      max-width: 400px;
+      background: white;
+      color: #282c34;
+      font-size: 16px;
+      border: 1px solid white;
+      text-align: center;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px;
+      transition: 0.5s;
+
+
+      &__img {
+        max-width: 300px;
+      }
+
+      &__id{
+        text-align: center;
+      }
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .info {
+    &__body{
+      &__block{
+        width: 100%;
+      }
+    }
+  }
+}

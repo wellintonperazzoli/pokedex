@@ -1,0 +1,192 @@
+html {
+  background-color: #282c34;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cardList {
+  text-align: center;
+  display: flex;
+  align-items: left;
+  font-size: calc(10px + 2vmin);
+  align-items:flex-start;
+  align-content:flex-start;
+  flex-wrap: wrap;
+}
+
+.cardList__card {
+  width: calc(100vh / 4 - 25px);
+  background: white;
+  color: #282c34;
+  font-size: 16px;
+  border: 1px solid white;
+  text-align: left;
+  padding: 10px 0;
+  margin: 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.cardList__card__img {
+  width: 100%;
+}
+
+.cardList__card__info {
+  margin: 0 10px;
+}
+
+.cardList__card__id {
+  letter-spacing: 0.2em;
+  text-align: left;
+  font-size: 0.8em;
+  margin: 0;
+  color: gray;
+}
+
+.cardList__card__name {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.cardList__card__category {
+  background-color: teal;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 1.5em;
+  margin: 0 3% 0 0;
+  width: 30%;
+  display: inline-block;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.cardList__card__category--grass {
+  background-color: green;
+}
+
+.cardList__card__category--fire {
+  background-color: red;
+}
+
+.cardList__card__category--water {
+  background-color: lightblue;
+}
+
+.cardList__card__category--flying { 
+  background-color: silver;
+}
+
+.cardList__card__category--poison {
+  background-color: slateblue;
+}
+
+.cardList__card__category--bug {
+  background-color: brown;
+}
+
+.cardList__card:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  margin-top: -2px;
+}
+
+
+.info {
+  background-color: white;
+  padding: 0 10px;
+}
+
+.info__header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  border-bottom: 1px solid silver;
+  padding: 10px;
+}
+
+.info__body {
+  display: flex;
+  align-items: left;
+  align-items:flex-start;
+  align-content:flex-start;
+  flex-wrap: wrap;
+}
+
+.info__body__block { 
+  width: 50%;
+}
+
+.info__body__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.info__body__desc {
+  color: black;
+}
+
+.info__body__category {
+  margin: 10px 0;
+}
+
+.info__body__category__type {
+  background-color: teal;
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px 30px;
+  margin: 0 3% 0 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.info__body__category__type--grass {
+  background-color: green;
+}
+.info__body__category__type--fire {
+  background-color: red;
+}
+.info__body__category__type--water {
+  background-color: lightblue;
+}
+
+.info__body__category__type--flying { 
+  background-color: silver;
+}
+
+.info__body__category__type--poison {
+  background-color: slateblue;
+}
+
+.info__body__category__type--bug {
+  background-color: brown;
+}
+
+.info__footer {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 20px;
+  border-top: 1px solid silver;
+}
+
+.info__footer__button {
+  text-decoration: none;
+  background-color: lightskyblue;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.7em;
+}
+
+.info__footer__button:hover{
+  background-color: lightblue;
+}
+
+
